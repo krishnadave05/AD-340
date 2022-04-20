@@ -3,4 +3,9 @@
     <string name="Hello_World">Hello World</string>
     <string name="Name_Date">Krishna Dave</string>
     <string name="Name_and_Date">Krishna Dave,04-10-2022</string>
+    <string name="name">enter_name</string>
+    <string name="enter_email">enter_email</string>
+    <string name="user_name">user_name</string>
+    <string name="submit">submit</string>
+    <string name="name_date">Name_Date</string>
 </resources>
