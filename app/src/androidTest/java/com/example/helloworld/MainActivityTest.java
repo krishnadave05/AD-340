@@ -26,7 +26,7 @@ public class MainActivityTest {
 
     @Test
     public void displaysHelloWorld(){
-        onView(withId(R.id.hello_world)).check(matches(withText("helloworld")));
+        onView(withId(R.id.hello_world)).check(matches(withText("hello_world")));
     }
 
 }
