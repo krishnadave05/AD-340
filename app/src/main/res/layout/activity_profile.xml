@@ -2,13 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/scroll"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:id="@+id/scroll"
     android:orientation="vertical"
-    tools:context=".Fragments.ProfileFragment"
+    android:background="#ffffff"
     tools:ignore="Overdraw">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/topName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bold_roboto"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="#ECF0F1"
+            android:padding="5dp"
+            android:tint="#596C84"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,UnusedAttribute,UseAppTint" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -78,7 +115,7 @@
                             android:layout_gravity="center_vertical"
                             android:textColor="#000000"
                             android:textSize="23sp"
-                            tools:ignore="ContentDescription" />
+                           tools:ignore="ContentDescription" />
 
                         <ImageView
                             android:id="@+id/verify"
@@ -133,7 +170,7 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <TextView
-                                tools:ignore="ContentDescription,HardcodedText"
+                               tools:ignore="ContentDescription,HardcodedText"
                                 android:id="@+id/posts"
                                 android:fontFamily="@font/black"
                                 android:textSize="14sp"
@@ -144,7 +181,7 @@
                                 android:text="38" />
 
                             <TextView
-                                tools:ignore="ContentDescription"
+                               tools:ignore="ContentDescription"
                                 android:fontFamily="@font/bold_roboto"
                                 android:textColor="#566573"
                                 android:textSize="14sp"
@@ -166,7 +203,7 @@
                             app:layout_constraintTop_toTopOf="parent">
 
                             <TextView
-                                tools:ignore="ContentDescription,HardcodedText"
+                               tools:ignore="ContentDescription,HardcodedText"
                                 android:fontFamily="@font/black"
                                 android:textSize="14sp"
                                 android:id="@+id/followers"
@@ -184,7 +221,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:text="Followers"
-                                tools:ignore="ContentDescription" />
+                               tools:ignore="ContentDescription" />
 
                         </LinearLayout>
 
@@ -207,7 +244,7 @@
                                 android:text="123"
                                 android:textColor="#000000"
                                 android:textSize="14sp"
-                                tools:ignore="ContentDescription,HardcodedText" />
+                               tools:ignore="ContentDescription,HardcodedText" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -217,7 +254,7 @@
                                 android:text="Following"
                                 android:textColor="#566573"
                                 android:textSize="14sp"
-                                tools:ignore="ContentDescription" />
+                               tools:ignore="ContentDescription" />
 
                         </LinearLayout>
 
@@ -243,6 +280,7 @@
                             android:layout_height="match_parent">
 
                             <Button
+                                android:visibility="invisible"
                                 android:id="@+id/follow"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
@@ -274,6 +312,7 @@
                         </RelativeLayout>
 
                         <ImageView
+                            android:visibility="invisible"
                             android:id="@+id/more"
                             android:padding="8dp"
                             android:src="@drawable/ic_plus"
@@ -282,7 +321,7 @@
                             android:layout_width="35dp"
                             android:layout_height="35dp"
                             tools:ignore="ContentDescription,UnusedAttribute"
-                            />
+                             />
 
                     </LinearLayout>
 
@@ -473,5 +512,6 @@
         </androidx.core.widget.NestedScrollView>
 
     </LinearLayout>
+
 
 </LinearLayout>
